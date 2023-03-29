@@ -1,12 +1,31 @@
 import './App.css'
 import { Home } from './components/Home'
+import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client'
+import { Navbar } from './components/Navbar'
+import { Form } from './components/Form'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { Login } from './components/Login'
 
 
 function App() {
  
-
+  const client = new ApolloClient({
+    cache: new InMemoryCache(),
+    uri: "http://localhost:3000/"
+  })
+ 
   return (
-  <Home />    
+    <Router>
+    <ApolloProvider client={client}>
+      <Navbar />
+      <Routes>
+        <Route path="/home" element={<Home />} />
+        <Route path="/new-movie" element={<Form />} />
+        <Route index element={<Login />} />
+      {/*   <Route path="/employee" element={<EmployeeSubList />} /> */}
+      </Routes>
+    </ApolloProvider>
+  </Router>
   )
 }
 
