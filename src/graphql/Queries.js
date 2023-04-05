@@ -14,14 +14,13 @@ query getMovies{
 `
 
 export const GET_MOVIE_BY_TITLE = gql`
-   query getMovieeByTitle($title:String){
-    getEmployeeByName(title: $title){
+   query getMovieByTitle($title:String){
+    getMovieByTitle(title: $title){
          _id 
         title
         description
         date_of_released
-        age
-        
+        image
     }
    }
 

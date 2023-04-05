@@ -2,16 +2,26 @@ import { useMutation } from "@apollo/client";
 import { useState, useEffect } from "react";
 import { CREATE_MOVIE } from "../graphql/Mutation";
 import { useNavigate } from "react-router-dom";
+import { userState } from "../config/userState";
 
 
 export const Form = () => {
-    const Navigate = useNavigate()
+    const navigate = useNavigate()
     const [title, setTitle] = useState("")
     const [description, setDescription] = useState("")
     const [date_of_released, setDate_of_released] = useState("")
     const [image, setImage] = useState("")
+    const verifySession = userState((state) => state.session)
 
     const [createMovie] = useMutation(CREATE_MOVIE, {})
+
+    useEffect(() => {
+      if ( !verifySession.isValid ) return navigate( '/' )
+        createMovie()
+    
+      
+    }, []);
+  
   
   
     return (
@@ -23,7 +33,7 @@ export const Form = () => {
             await createMovie( { 
                 variables: {title, description, date_of_released, image}
             })
-            Navigate('/home')
+            navigate('/home')
             // Redirigir el usuario hacia /home
           }} >
       <div className="mb-6">

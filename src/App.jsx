@@ -5,6 +5,7 @@ import { Navbar } from './components/Navbar'
 import { Form } from './components/Form'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { Login } from './components/Login'
+import { MovieSubList } from './components/MovieSubList'
 
 
 function App() {
@@ -22,7 +23,7 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/new-movie" element={<Form />} />
         <Route index element={<Login />} />
-      {/*   <Route path="/employee" element={<EmployeeSubList />} /> */}
+        <Route path="/movie" element={<MovieSubList />} />
       </Routes>
     </ApolloProvider>
   </Router>
