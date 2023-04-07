@@ -25,7 +25,7 @@ export const Form = () => {
   
   
     return (
-    <form className="w-3/6 ml-56 mt-16"
+    <form className=" grid grid-cols-1 gap-4 max-w-xl m-auto "
           onSubmit={async ( event ) => {
             event.preventDefault() // Para que los datos persistan  
             // Llamar al mutation para crear la movie

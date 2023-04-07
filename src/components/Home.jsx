@@ -27,7 +27,7 @@ export const Home = () => {
   if (error) return <h1>Error: {error}</h1>;
 
   return (
-    <div className="grid grid-cols-4 gap-4 ">
+    <div className="grid grid-flow-row gap-8 text-neutral-600 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
       {data &&             // Validamos que data Existe
         data.getMovies.map(
           ({ _id, title, description, date_of_released, image }) => (

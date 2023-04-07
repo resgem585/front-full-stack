@@ -12,6 +12,7 @@ export const Navbar = () => {
   const [movieInfo, setMovieInfo] = useState("");
   const getUserSession = userState((state) => state.session);
   const [getMovieByTitle, { data, error }] = useLazyQuery(GET_MOVIE_BY_TITLE);
+  console.log("current session", getUserSession);
 
   return (
     <nav className="px-2 bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700">
