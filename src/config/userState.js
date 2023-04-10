@@ -1,6 +1,6 @@
-import create from "zustand";
+import {create} from "zustand";
 
-export const userState = create( ( set ) => ( {
+ const userState = create( ( set ) => ( {
     
     session: { isValid: false }, //  var session = false
     
@@ -16,3 +16,5 @@ export const userState = create( ( set ) => ( {
         }))
     
 } ) )
+
+export default userState

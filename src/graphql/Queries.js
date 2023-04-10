@@ -1,6 +1,6 @@
 import {gql} from '@apollo/client'
 
-export const GET_MOVIE = gql`
+export const GET_MOVIES = gql`
 
 query getMovies{
     getMovies {
@@ -8,6 +8,7 @@ query getMovies{
         title
         description
         date_of_released
+        likes
         image
     }
 }
@@ -20,6 +21,7 @@ export const GET_MOVIE_BY_TITLE = gql`
         title
         description
         date_of_released
+        likes
         image
     }
    }

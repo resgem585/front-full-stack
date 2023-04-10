@@ -2,10 +2,10 @@ import { useMutation } from "@apollo/client";
 import { useState, useEffect } from "react";
 import { CREATE_MOVIE } from "../graphql/Mutation";
 import { useNavigate } from "react-router-dom";
-import { userState } from "../config/userState";
+import  userState  from "../config/userState";
 
 
-export const Form = () => {
+    const MovieForm = () => {
     const navigate = useNavigate()
     const [title, setTitle] = useState("")
     const [description, setDescription] = useState("")
@@ -113,3 +113,5 @@ export const Form = () => {
     </form>
   );
 }
+
+export default MovieForm
