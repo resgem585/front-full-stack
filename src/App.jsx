@@ -25,7 +25,7 @@ function App() {
       <Routes>
         <Route index element={<Login />} />
         <Route path="/home" element={<Home />} />
-        <Route path="/newMovie" element={<NewMovie />} />
+        <Route path="/new-movie" element={<NewMovie />} />
         <Route path="/search/:search" element={<SearchedMovies />} />
       </Routes>
     </ApolloProvider>
