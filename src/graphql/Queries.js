@@ -7,6 +7,7 @@ query getMovies{
         _id 
         title
         description
+        likes
         date_of_released
         image
     }
