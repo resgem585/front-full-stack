@@ -22,7 +22,7 @@ import { GET_MOVIES } from "../graphql/Queries";
   
   
     return (
-    <form className=" flex flex-col items-center  h-screen mt-8  "
+    <form className=" flex flex-col items-center  h-screen mt-8 text-center  "
           onSubmit={async ( event ) => {
             event.preventDefault() 
             await createMovie( { 

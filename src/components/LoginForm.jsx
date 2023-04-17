@@ -19,7 +19,7 @@ import "../styles/login.css";
     variables: { email, password },
   });
   return (
-    <section className="flex flex-col items-center  h-screen  ">
+    <section className="flex flex-col items-center  h-screen text-center  ">
       <div className="text-gray-50 text-4xl py-8 ">Iniciar Sesion</div>
       <div className="sm:w-80 md:w-80 lg:w-96 bg-white rounded-lg">
         <div className="p-6 space-y-6">
