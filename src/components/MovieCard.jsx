@@ -36,16 +36,13 @@ const MovieCard = ({ data }) => {
 
   return (
     <div className='max-w-sm shadow'>
-      <div className='group relative bg-black rounded-md h-46 xs:h-48 2xl:h-48'>
+      <div className='group relative bg-black rounded-md h-46 xs:h-48 2xl:h-4'>
         <img
           alt={title}
           src={image}
           className='absolute inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50 rounded-md'
         />
         <div className='relative p-4'>
-          <p className='text-sm 2xl:text-sm font-bold uppercase -tracking-normal text-cyan-600'>
-            Movie
-          </p>
           <p className='text-lg 2xl:text-xl font-bold text-white'>{title}</p>
           <div className='flex justify-start space-x-4 translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100 mt-2'>
             <p className='text-sm 2xl:text-base font-medium text-white'>

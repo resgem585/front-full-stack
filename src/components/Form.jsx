@@ -2,33 +2,29 @@ import { useMutation } from "@apollo/client";
 import { useState, useEffect } from "react";
 import { CREATE_MOVIE } from "../graphql/Mutation";
 import { useNavigate } from "react-router-dom";
-import { GET_MOVIES } from "../graphql/Queries";
 
 
-
-    const MovieForm = () => {
-    const navigate = useNavigate()
+export const Form = () => {
+    const Navigate = useNavigate()
     const [title, setTitle] = useState("")
     const [description, setDescription] = useState("")
-    const [dateOfReleased, setDateOfReleased] = useState("")
+    const [date_of_released, setDate_of_released] = useState("")
     const [image, setImage] = useState("")
 
-
-    const [createMovie] = useMutation(CREATE_MOVIE, {
-      refetchQueries: [{ query: GET_MOVIES }]
-    })
-
- 
+    const [createMovie] = useMutation(CREATE_MOVIE, {})
   
   
     return (
-    <form className=" flex flex-col items-center  h-screen mt-8  "
+    <form className="w-3/6 ml-56 mt-16"
           onSubmit={async ( event ) => {
-            event.preventDefault() 
+            event.preventDefault() // Para que los datos persistan  
+            // Llamar al mutation para crear la movie
+
             await createMovie( { 
-                variables: {title, description, dateOfReleased, image}
+                variables: {title, description, date_of_released, image}
             })
-            navigate('/home')
+            Navigate('/home')
+            // Redirigir el usuario hacia /home
           }} >
       <div className="mb-6">
         <label
@@ -74,9 +70,9 @@ import { GET_MOVIES } from "../graphql/Queries";
         <input
           type="text"
           onChange={(event) => {
-            setDateOfReleased(event.target.value)
+            setDate_of_released(event.target.value)
           }}
-          id="dateOfReleased"
+          id="date_of_released"
           className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
           required
         />
@@ -107,5 +103,3 @@ import { GET_MOVIES } from "../graphql/Queries";
     </form>
   );
 }
-
-export default MovieForm

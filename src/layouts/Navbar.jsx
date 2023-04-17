@@ -77,7 +77,7 @@ export const Navbar = () => {
               </div>
               <button
                 type='submit'
-                className='p-2.5 text-sm font-medium text-white bg-sky-700 border hover:bg-blue-700'
+                className='p-4 text-sm font-medium text-white bg-sky-700 border hover:bg-blue-700'
               >
                 <svg
                   className='w-4 h-4 sm:w-5 sm:h-5'
@@ -128,7 +128,7 @@ export const Navbar = () => {
               <li>
                 <Link
                   to="/home"
-                  className="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-white dark:bg-blue-600 md:dark:bg-transparent"
+                  className="block py-2 pl-3 pr-4 text-lg text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-white dark:bg-blue-600 md:dark:bg-transparent"
                   aria-current="page"
                 >
                   Home
@@ -137,7 +137,7 @@ export const Navbar = () => {
               <li>
                 <Link
                   to="/new-movie"
-                  className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                  className="block py-2 pl-3 pr-4 text-lg text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                 >
                   New Movie
                 </Link>
