@@ -11,7 +11,6 @@ export const Navbar = () => {
   
 ;
   const destroyUserSession = userState((state) => state.removeSession);
-
   const getUserSession = userState((state) => state.session);
   
   const [searchedValue, setSearchedValue] = useState('')
