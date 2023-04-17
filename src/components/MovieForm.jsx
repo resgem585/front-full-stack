@@ -2,29 +2,33 @@ import { useMutation } from "@apollo/client";
 import { useState, useEffect } from "react";
 import { CREATE_MOVIE } from "../graphql/Mutation";
 import { useNavigate } from "react-router-dom";
+import { GET_MOVIES } from "../graphql/Queries";
 
 
-export const Form = () => {
-    const Navigate = useNavigate()
+
+    const MovieForm = () => {
+    const navigate = useNavigate()
     const [title, setTitle] = useState("")
     const [description, setDescription] = useState("")
-    const [date_of_released, setDate_of_released] = useState("")
+    const [dateOfReleased, setDateOfReleased] = useState("")
     const [image, setImage] = useState("")
 
-    const [createMovie] = useMutation(CREATE_MOVIE, {})
+
+    const [createMovie] = useMutation(CREATE_MOVIE, {
+      refetchQueries: [{ query: GET_MOVIES }]
+    })
+
+ 
   
   
     return (
-    <form className="w-3/6 ml-56 mt-16"
+    <form className=" flex flex-col items-center  h-screen mt-8  "
           onSubmit={async ( event ) => {
-            event.preventDefault() // Para que los datos persistan  
-            // Llamar al mutation para crear la movie
-
+            event.preventDefault() 
             await createMovie( { 
-                variables: {title, description, date_of_released, image}
+                variables: {title, description, dateOfReleased, image}
             })
-            Navigate('/home')
-            // Redirigir el usuario hacia /home
+            navigate('/home')
           }} >
       <div className="mb-6">
         <label
@@ -70,9 +74,9 @@ export const Form = () => {
         <input
           type="text"
           onChange={(event) => {
-            setDate_of_released(event.target.value)
+            setDateOfReleased(event.target.value)
           }}
-          id="date_of_released"
+          id="dateOfReleased"
           className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
           required
         />
@@ -103,3 +107,5 @@ export const Form = () => {
     </form>
   );
 }
+
+export default MovieForm

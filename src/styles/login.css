@@ -1,0 +1,174 @@
+.inicio {
+    color:rgb(255, 255, 255) ;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 34px;
+    letter-spacing: 0px;
+    line-height: 37.8;
+    padding-bottom: 50px;
+    margin-top: 40px;
+}
+
+
+.form1 {
+    display: flex;
+    justify-content: center;
+}
+   
+
+
+.css-175oi2r{
+align-items: stretch;
+background-color: rgba(221, 221, 221, 0.06);
+border-radius: 8;
+flex-direction: column;
+justify-content: center;
+padding: 48;
+width: 837.333px;
+}
+
+.css-1rynq56 {
+    color: rgb(255, 255, 255);
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 28;
+    letter-spacing: 0;
+    line-height: 37.8px;
+}
+
+.css-1rynq56 {
+    color: rgb(255, 255, 255);
+    font-family: StreetLCG2;
+    font-style: normal;
+    letter-spacing: 0px;
+    line-height: 21px
+}
+
+.r-1oszu61 {
+    align-items: stretch;
+}
+
+.r-1h0z5md {
+    justify-content: flex-start;
+}
+
+.r-eqz5dr {
+    flex-direction: column;
+}
+
+.r-1ifxtd0 {
+    margin-bottom: 16px;
+}
+
+input {
+    --placeholderTextColor: rgba(255,255,255,0.7);
+    align-self: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-color: rgba(255, 255, 255, 0.4);
+    border-radius: 4px;
+    border-width: 0.5px;
+    color: rgb(255, 255, 255);
+    height: 56px;
+    padding-left: 12px;
+    width: 100%;
+    padding-right: 44px;
+    font-family: StreetLCG2;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    letter-spacing: 0px;
+}
+.css-11aywtz {
+    appearance: none;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 0px;
+    border: 0px solid black;
+    box-sizing: border-box;
+    font: 14px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    resize: none;
+}
+.r-173mn98 {
+    align-self: flex-end;
+}
+.r-1mwlp6a {
+    height: 56px;
+}
+.r-usgzl9 {
+    width: 44px;
+}
+.r-1otgn73 {
+    touch-action: manipulation;
+}
+.r-1loqt21 {
+    cursor: pointer;
+}
+.r-1niwhzg {
+    background-color: rgba(0, 0, 0, 0);
+}
+.r-1777fci {
+    justify-content: center;
+}
+
+.r-u8s1d {
+    position: absolute;
+}
+
+.r-1x0uki6 {
+    margin-top: 20px;
+}
+
+.r-1h0z5md {
+    justify-content: flex-start;
+}
+
+.r-1w6e6rj {
+    flex-wrap: wrap;
+}
+
+.r-1awozwy {
+    align-items: center;
+}
+
+.r-18u37iz {
+    flex-direction: row;
+}
+
+.r-173mn98 {
+    align-self: flex-end;
+}
+
+.r-1mwlp6a {
+    height: 56px;
+}
+
+.r-usgzl9 {
+    width: 44px;
+}
+
+.r-1otgn73 {
+    touch-action: manipulation;
+}
+
+.r-1loqt21 {
+    cursor: pointer;
+}
+
+.r-1niwhzg {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.r-1777fci {
+    justify-content: center;
+}
+
+.r-u8s1d {
+    position: absolute;
+}
+
+.css-9pa8cd {
+    background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAM1BMVEUAAAD/TEz/S0v/TU3/TEz/UFD/UFD/TEz/TEz/TEz/Skr/S0v/QED/TU3/TU3/TU3/TEyEKNmKAAAAEXRSTlMAQHCfgCAQr++QYN8QoGCPf624WOIAAABoSURBVHgBBcGBAYMgDACwCC1SGOr/1y4BAABcrfdIAOOetVbtnkDuGiD2D5zA86BuyA0RGPNCFERANZwHImB1nAciYHW0AgMqcM0fMmEn3C9O4Otg7A+MdyeQZ9daNe8BIKP3dgEAAH9qmQK2hALIPwAAAABJRU5ErkJggg==&quot);
+}
